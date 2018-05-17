@@ -104,7 +104,7 @@ public class JestClientFactoryTest {
     @Test
     public void clientCreationWithDiscoveryAndOverriddenNodeChecker() {
         JestClientFactory factory = Mockito.spy(new ExtendedJestClientFactory());
-        HttpClientConfig httpClientConfig = Mockito.spy(new HttpClientConfig.Builder("http://localhost:9200")
+        HttpClientConfig httpClientConfig = Mockito.spy(new HttpClientConfig.Builder("http://10.104.112.235:9200")
                 .discoveryEnabled(true)
                 .build());
         factory.setHttpClientConfig(httpClientConfig);
